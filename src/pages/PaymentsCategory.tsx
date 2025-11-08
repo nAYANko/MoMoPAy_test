@@ -30,7 +30,7 @@ const PaymentsCategory = () => {
         {/* Main circle with categories */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-5xl font-bold text-primary-foreground mb-16">
+            <h1 className="text-3xl mt-10 font-bold text-primary-foreground mb-16">
               Choose Payment Category
             </h1>
 
