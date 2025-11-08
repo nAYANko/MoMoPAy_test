@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const HeroCircle = () => {
   return (
-    <div className="absolute -right-1/4 top-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary flex items-center justify-center overflow-visible">
+    <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] rounded-full bg-primary flex items-center justify-center overflow-hidden">
       <div className="max-w-lg text-center px-12">
         <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-12 leading-tight">
           "Organize Your Expenses Better Than Ever"
