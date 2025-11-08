@@ -28,7 +28,7 @@ const PaymentsCategory = () => {
         <div className="absolute right-24 top-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-secondary z-10" />
 
         {/* Main circle with categories */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary flex items-center justify-center">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-primary-foreground mb-16">
               Choose Payment Category
@@ -53,9 +53,11 @@ const PaymentsCategory = () => {
             </div>
 
             {/* Plus button */}
-            <button className="w-16 h-16 flex items-center justify-center hover:scale-110 transition-transform">
-              <Plus className="w-12 h-12 text-primary-foreground stroke-[3]" />
-            </button>
+            <div className="flex justify-center">
+              <button className="w-16 h-16 flex items-center justify-center hover:scale-110 transition-transform">
+                <Plus className="w-12 h-12 text-primary-foreground stroke-[3]" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
