@@ -50,17 +50,18 @@ const Track = () => {
       </div>
 
       {/* Large green circle at top */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 w-[600px] h-[600px] rounded-full bg-primary flex items-center justify-center">
-        <h1 className="text-5xl font-bold text-primary-foreground mt-32">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary flex items-center justify-center">
+
+        <h1 className="text-5xl font-bold text-primary-foreground mt-60">
           Track Expenses
         </h1>
       </div>
 
       {/* Main content */}
-      <div className="relative pt-64 px-12 pb-12">
+      <div className="relative pt-64 px-12 mt-24 pb-12">
         {/* Remaining Budget */}
         <div className="flex justify-center mb-12">
-          <div className="bg-primary/80 text-primary-foreground px-16 py-6 rounded-full text-2xl font-bold border-2 border-primary-foreground/20">
+          <div className="bg-primary/80 text-primary-foreground opacity-75 px-16 py-6 rounded-full text-2xl font-bold border-2 border-primary-foreground/20">
             REMAINING MONTLY BUDGET: 0
           </div>
         </div>
@@ -68,18 +69,22 @@ const Track = () => {
         {/* Pie Charts */}
         <div className="grid grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Category Distribution */}
-          <div className="bg-primary/80 rounded-3xl p-8 border-2 border-primary-foreground/20">
+          <div className="bg-primary/80 rounded-3xl opacity-85 p-8 border-2 border-primary-foreground/20">
             <h2 className="text-2xl font-bold text-primary-foreground text-center mb-6">
               Category<br />Distribution
             </h2>
             <div className="flex items-center gap-8">
-              <div className="flex flex-col gap-3">
-                {categoryData.map((entry, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <div className="w-8 h-6 bg-white rounded"></div>
-                  </div>
-                ))}
-              </div>
+                <div className="flex flex-col gap-3">
+                  {categoryData.map((entry, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <div
+                        className="w-8 h-6 rounded"
+                        style={{ backgroundColor: COLORS[index % COLORS.length] }}
+                      ></div>
+                      <span className="text-primary-foreground">{entry.name}</span>
+                    </div>
+                  ))}
+                </div>
               <ResponsiveContainer width={200} height={200}>
                 <PieChart>
                   <Pie
@@ -101,7 +106,7 @@ const Track = () => {
           </div>
 
           {/* Weekly Distribution */}
-          <div className="bg-primary/80 rounded-3xl p-8 border-2 border-primary-foreground/20">
+          <div className="bg-primary/80 rounded-3xl p-8 opacity-85 border-2 border-primary-foreground/20">
             <h2 className="text-2xl font-bold text-primary-foreground text-center mb-6">
               Weekly<br />Distribution
             </h2>
@@ -126,10 +131,15 @@ const Track = () => {
               <div className="flex flex-col gap-3">
                 {weeklyData.map((entry, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <div className="w-8 h-6 bg-white rounded"></div>
+                    <div
+                      className="w-8 h-6 rounded"
+                      style={{ backgroundColor: COLORS[index % COLORS.length] }}
+                    ></div>
+                    <span className="text-primary-foreground">{entry.name}</span>
                   </div>
                 ))}
               </div>
+
             </div>
           </div>
         </div>
