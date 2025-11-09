@@ -1,5 +1,5 @@
 import Logo from "@/components/Logo";
-import { ArrowLeft, Plus } from "lucide-react";
+import { ArrowLeft, ArrowRight, Plus } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -24,8 +24,13 @@ const PaymentsCategory = () => {
           <ArrowLeft className="w-8 h-8 text-secondary-foreground" />
         </button>
 
-        {/* Decorative circle - right */}
-        <div className="absolute right-24 top-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-secondary z-10" />
+        {/* Arrow button circle - right */}
+        <button
+          onClick={() => navigate("/payment")}
+          className="absolute right-24 top-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/90 transition-colors z-10"
+        >
+          <ArrowRight className="w-8 h-8 text-secondary-foreground" />
+        </button>
 
         {/* Main circle with categories */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary flex items-center justify-center">
