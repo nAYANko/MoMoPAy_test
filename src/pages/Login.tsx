@@ -15,7 +15,7 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-background relative overflow-hidden flex items-center justify-center">
+    <div className="min-h-screen bg-background relative overflow-hidden flex items-center justify-center">
       {/* Logo */}
       <div className="absolute top-8 left-8 z-10">
         <Logo />
@@ -74,7 +74,7 @@ const Login = () => {
       <Button
           type="submit"
           onClick={handleSubmit}
-          className="absolute bottom-32 bg-primary/80 hover:bg-primary text-primary-foreground font-bold text-lg px-12 h-14 rounded-full border-2 border-primary-foreground/30"
+          className="absolute bottom-24 bg-primary/80 hover:bg-primary text-primary-foreground font-bold text-lg px-12 h-14 rounded-full border-2 border-primary-foreground/30"
         >
           LOGIN
         </Button>
