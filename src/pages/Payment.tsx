@@ -31,13 +31,13 @@ const Payment = () => {
         {/* Back button circle - left */}
         <button
           onClick={() => navigate("/payments-category")}
-          className="absolute left-24 top-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/90 transition-colors z-10"
+          className="absolute left-24 top-1/2 -translate-y-1/2 w-32 h-32 opacity-65 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/90 transition-colors z-10"
         >
           <ArrowLeft className="w-8 h-8 text-secondary-foreground" />
         </button>
 
         {/* Main circle with content */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary flex items-center justify-center">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary flex items-center justify-center">
           {!isLoading && !isComplete && (
             <div className="text-center">
               <h1 className="text-3xl font-bold text-primary-foreground mb-12">

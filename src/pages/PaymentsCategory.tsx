@@ -19,7 +19,7 @@ const PaymentsCategory = () => {
         {/* Back button circle - left */}
         <button
           onClick={() => navigate("/")}
-          className="absolute left-24 top-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/90 transition-colors z-10"
+          className="absolute left-24 top-1/2 -translate-y-1/2 w-32 h-32 opacity-65 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/90 transition-colors z-10"
         >
           <ArrowLeft className="w-8 h-8 text-secondary-foreground" />
         </button>
@@ -27,7 +27,7 @@ const PaymentsCategory = () => {
         {/* Arrow button circle - right */}
         <button
           onClick={() => navigate("/payment")}
-          className="absolute right-24 top-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/90 transition-colors z-10"
+          className="absolute right-24 top-1/2 -translate-y-1/2 w-32 h-32 opacity-65 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/90 transition-colors z-10"
         >
           <ArrowRight className="w-8 h-8 text-secondary-foreground" />
         </button>
