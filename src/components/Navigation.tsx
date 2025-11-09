@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const navItems = [
-    { label: "Track Expenses", href: "#track" },
+    { label: "Track Expenses", href: "/track" },
     { label: "Manage Categories", href: "#categories" },
     { label: "Settings", href: "/settings" },
   ];
