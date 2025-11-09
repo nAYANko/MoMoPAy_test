@@ -65,54 +65,6 @@ const Track = () => {
           </div>
         </div>
 
-        {/* Contribution Graph */}
-        <div className="max-w-5xl mx-auto mb-12 bg-card/50 border border-border rounded-lg p-8">
-          <div className="grid grid-cols-[auto,repeat(13,1fr)] gap-2 items-center">
-            {/* Month headers */}
-            <div></div>
-            {["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"].map((month, i) => (
-              <div key={i} className="text-xs text-muted-foreground text-center">
-                {month}
-              </div>
-            ))}
-
-            {/* Day labels and contribution squares */}
-            {["Mon", "Wed", "Fri"].map((day, dayIndex) => (
-              <>
-                <div className="text-xs text-muted-foreground pr-2">{day}</div>
-                {Array.from({ length: 13 }).map((_, monthIndex) => {
-                  const dataPoint = contributionData[dayIndex * 13 + monthIndex];
-                  const intensity = dataPoint?.count || 0;
-                  return (
-                    <div
-                      key={`${dayIndex}-${monthIndex}`}
-                      className="aspect-square rounded-sm"
-                      style={{
-                        backgroundColor: intensity === 0 ? "hsl(var(--muted))" : 
-                                       intensity === 1 ? "hsl(142 69% 45% / 0.4)" :
-                                       intensity === 2 ? "hsl(142 69% 45% / 0.6)" :
-                                       "hsl(142 69% 45%)"
-                      }}
-                    />
-                  );
-                })}
-              </>
-            ))}
-          </div>
-
-          <div className="flex items-center justify-end gap-2 mt-4 text-xs text-muted-foreground">
-            <span>Learn how we count contributions</span>
-            <span className="ml-4">Less</span>
-            <div className="flex gap-1">
-              <div className="w-3 h-3 rounded-sm bg-muted"></div>
-              <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: "hsl(142 69% 45% / 0.4)" }}></div>
-              <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: "hsl(142 69% 45% / 0.6)" }}></div>
-              <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: "hsl(142 69% 45%)" }}></div>
-            </div>
-            <span>More</span>
-          </div>
-        </div>
-
         {/* Pie Charts */}
         <div className="grid grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Category Distribution */}
