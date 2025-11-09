@@ -15,7 +15,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden flex items-center justify-center">
+    <div className="bg-background relative overflow-hidden flex items-center justify-center">
       {/* Logo */}
       <div className="absolute top-8 left-8 z-10">
         <Logo />
@@ -24,22 +24,22 @@ const Login = () => {
       {/* Background Text */}
       <div className="absolute inset-0 flex items-center justify-center opacity-10">
         <h1 className="text-[20rem] font-bold text-primary" style={{ 
-          WebkitTextStroke: '2px hsl(var(--primary))',
+          WebkitTextStroke: '4px hsl(var(--primary))',
           WebkitTextFillColor: 'transparent'
         }}>
-          MAYURA
+          MoMoPAy
         </h1>
       </div>
 
       {/* Large Green Circle */}
-      <div className="w-[900px] h-[900px] rounded-full bg-primary flex items-center justify-center relative">
+      <div className="w-[600px] h-[600px] rounded-full bg-primary flex items-center justify-center relative">
         {/* Login Card */}
-        <div className="bg-accent/60 rounded-[40px] p-12 w-[450px] shadow-2xl backdrop-blur-sm">
-          <h2 className="text-4xl font-bold text-white text-center mb-8">LOGIN</h2>
+        <div className="bg-accent/60 rounded-[40px] p-12 w-[350px] opacity-75 shadow-2xl backdrop-blur-sm">
+          <h2 className="text-4xl font-bold text-black text-center mb-8">LOGIN</h2>
           
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="space-y-3">
-              <Label htmlFor="username" className="text-white text-sm uppercase tracking-wider">
+              <Label htmlFor="username" className="text-black text-sm uppercase tracking-wider">
                 Username
               </Label>
               <Input
@@ -53,7 +53,7 @@ const Login = () => {
             </div>
 
             <div className="space-y-3">
-              <Label htmlFor="password" className="text-white text-sm uppercase tracking-wider">
+              <Label htmlFor="password" className="text-black text-sm uppercase tracking-wider">
                 Password
               </Label>
               <Input
@@ -69,14 +69,15 @@ const Login = () => {
         </div>
 
         {/* Login Button outside the card */}
-        <Button
+        
+      </div>
+      <Button
           type="submit"
           onClick={handleSubmit}
           className="absolute bottom-32 bg-primary/80 hover:bg-primary text-primary-foreground font-bold text-lg px-12 h-14 rounded-full border-2 border-primary-foreground/30"
         >
           LOGIN
         </Button>
-      </div>
     </div>
   );
 };
