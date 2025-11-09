@@ -4,7 +4,7 @@ const Navigation = () => {
   const navItems = [
     { label: "Track Expenses", href: "#track" },
     { label: "Manage Categories", href: "#categories" },
-    { label: "Settings", href: "#settings" },
+    { label: "Settings", href: "/settings" },
   ];
 
   return (
