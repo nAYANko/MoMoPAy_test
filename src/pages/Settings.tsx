@@ -31,9 +31,9 @@ const Settings = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex min-h-screen pt-32 px-12 gap-8">
-        {/* Sidebar */}
-        <div className="w-[230px] bg-primary/40 rounded-[40px] p-8 flex-shrink-0">
+      <div className="min-h-screen pt-32 px-12">
+        {/* Sidebar - Fixed */}
+        <div className="fixed left-12 top-32 w-[230px] bg-primary/40 rounded-[40px] p-8 z-20">
           <h2 className="text-3xl font-bold text-foreground mb-8">Settings</h2>
           <nav className="flex flex-col gap-4">
             {sidebarItems.map((item) => (
@@ -58,7 +58,7 @@ const Settings = () => {
         </div>
 
         {/* Content Area */}
-        <div className="flex-1 bg-primary rounded-[40px] p-12">
+        <div className="ml-[262px] bg-primary rounded-[40px] p-12">
           <h1 className="text-6xl font-bold text-primary-foreground mb-8">
             {activeSection}
           </h1>
